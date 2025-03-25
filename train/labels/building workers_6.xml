@@ -1,0 +1,38 @@
+<annotation>
+	<folder>images</folder>
+	<filename>building workers_6.jpeg</filename>
+	<path>D:\rasyid\LEARN\ML\yolov8_custom\images\building workers_6.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>866</width>
+		<height>1390</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>hat</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>306</xmin>
+			<ymin>91</ymin>
+			<xmax>635</xmax>
+			<ymax>311</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>jacket</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>110</xmin>
+			<ymin>521</ymin>
+			<xmax>761</xmax>
+			<ymax>1304</ymax>
+		</bndbox>
+	</object>
+</annotation>

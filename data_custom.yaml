@@ -1,0 +1,5 @@
+train: D:\rasyid\LEARN\ML\yolov8_custom\train
+val: D:\rasyid\LEARN\ML\yolov8_custom\val
+
+nc: 2
+names: ['hat', 'jacket']
