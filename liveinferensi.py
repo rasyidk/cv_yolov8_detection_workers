@@ -5,11 +5,12 @@ from ultralytics import YOLO
 # Load model YOLOv8 nano custom
 model = YOLO("yolov8n_custom.pt")  # Pastikan model tersedia
 
-# Gunakan kamera sebagai sumber video
+# Gunakan kamera atau video sebagai sumber
 cap = cv2.VideoCapture("vid1.mp4")
 
+# Set resolusi yang diinginkan (namun beberapa video tidak mendukung ini)
 cap.set(3, 320)  # Lebar
-cap.set(4, 240)
+cap.set(4, 240)  # Tinggi
 
 frame_skip = 6  # Deteksi setiap 6 frame
 frame_count = 0
@@ -23,12 +24,15 @@ while cap.isOpened():
     if not ret:
         break
 
+    # Pastikan frame diubah ke resolusi 320x240 sebelum diproses
+    frame = cv2.resize(frame, (320, 240))
+
     frame_count += 1
 
     # Hanya deteksi pada frame tertentu
     if frame_count % frame_skip == 1:
         inference_start = time.time()
-        results = model(frame)
+        results = model(frame, imgsz=320)
         inference_end = time.time()
 
         inference_time = inference_end - inference_start
