@@ -12,7 +12,7 @@ cap = cv2.VideoCapture("vid1.mp4")
 cap.set(3, 320)  # Lebar
 cap.set(4, 240)  # Tinggi
 
-frame_skip = 6  # Deteksi setiap 6 frame
+frame_skip = 7  # Deteksi setiap 6 frame
 frame_count = 0
 total_inference_time = 0
 processed_frames = 0
